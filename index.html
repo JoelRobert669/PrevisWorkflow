@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Previs Workflow Presentation</title>
+  <!-- Google Fonts for a modern look -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #141414, #2c2c2c);
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #ffcc00;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.1em;
+      max-width: 800px;
+      margin: 0 auto 20px;
+      padding: 0 10px;
+      text-align: center;
+    }
+    /* Force all images to the same dimensions */
+    img {
+      display: block;
+      width: 800px;
+      height: 400px;
+      object-fit: cover;
+      margin: 20px auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    img:hover {
+      transform: scale(1.05);
+    }
+    /* Section Styles */
+    section {
+      padding: 60px 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Pricing Table */
+    table {
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: #333;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    table th, table td {
+      padding: 12px;
+      border: 1px solid #555;
+      text-align: center;
+    }
+    table th {
+      background-color: #444;
+    }
+    /* Header Banner */
+    header {
+      padding: 40px 20px;
+      background: #1a1a1a;
+      text-align: center;
+      border-bottom: 2px solid #ffcc00;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    /* Back to Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ffcc00;
+      color: #1a1a1a;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: none;
+      transition: background 0.3s ease;
+      z-index: 1000;
+    }
+    #backToTop:hover {
+      background: #e6b800;
+    }
+    /* Center bullet points in the Animation section */
+    #animation ul {
+      list-style: disc;
+      text-align: center;
+      padding-left: 40px;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Previs Workflow for Gladiator</h1>
+    <p>A step-by-step guide from storyboarding to final edit.</p>
+  </header>
+
+  <!-- Sections for each stage -->
+  <main>
+    <!-- 1. Storyboard -->
+    <section id="storyboard">
+      <h2>1. Storyboard</h2>
+      <p>A series of drawings or images outlining the sequence of events. It provides a visual guide to help the team understand the story and plan the shot.</p>
+      <img src="https://media.gettyimages.com/id/939238796/video/womans-director-hand-while-sketching-and-brainstorming-for-making-storyboard-of-her-work.jpg?s=640x640&k=20&c=W4huJ-AtVGuNI_ZbeQdC1qQvousM-N8oy2K-AZlYSnw=" alt="Storyboard">
+    </section>
+
+    <!-- 2. Mood Board -->
+    <section id="moodboard">
+      <h2>2. Mood Board</h2>
+      <p>A collection of reference images, videos, or color swatches that capture the desired look and feel of the project, setting the visual tone.</p>
+      <img src="https://cdnb.artstation.com/p/assets/images/images/013/243/831/large/rogelio-navarro-1-sunset-greek-structures.jpg?1538709072" alt="Mood Board">
+    </section>
+
+    <!-- 3. Asset Collection and Generation -->
+    <section id="assets">
+      <h2>3. Asset Collection and Generation</h2>
+      <p>This phase involves gathering or creating all necessary 3D assets (modeling, texturing, rigging, etc.) for the shot, ensuring all elements are ready before animation begins.</p>
+      <img src="https://t3.ftcdn.net/jpg/05/49/69/36/360_F_549693683_73ll7LNdy5rJCACeWgPJzImO4LwLew7r.jpg" alt="Asset Collection">
+    </section>
+
+    <!-- 4. Scene Blocking -->
+    <section id="blocking">
+      <h2>4. Scene Blocking</h2>
+      <p>Using simple proxies or rough shapes, scene blocking sets the composition, camera angles, and timing of actions. This is essential for testing the layout before detailed animation.</p>
+      <img src="https://kreonit.com/wp-content/uploads/2023/09/nikolai-volkov-2022-10-28-09-42-51_11zon.webp" alt="Scene Blocking">
+    </section>
+
+    <!-- 5. Environment Design -->
+    <section id="environment">
+      <h2>5. Environment Design</h2>
+      <p>The environment is built using the generated assets, with initial lighting and mood settings that define the overall look of the shot.</p>
+      <img src="https://cdnb.artstation.com/p/assets/images/images/030/122/079/4k/jeff-severson-highresscreenshot00064-copy.jpg?1599669179" alt="Environment Design">
+    </section>
+
+    <!-- 6. Animation -->
+    <section id="animation">
+      <h2>6. Animation</h2>
+      <p>This core stage involves animating the characters and scene elements. Several methods are available:</p>
+      <img src="https://cdn.prod.website-files.com/5e6b63ac3b6e2522d1889f4a/63b582cd210647067dd895e7_top4riggedmodels2.jpg" alt="Scene Blocking">
+      <ul>
+        <li><strong>Manual 3D Animation:</strong> Hand‑animated frame by frame (₹600–₹1,000 per second).</li>
+        <li><strong>Motion Capture:</strong> Using systems like Rokoko’s suite (~₹360,000 one‑time bundle cost).</li>
+        <li><strong>AI Guided Animation:</strong> Options such as Move.ai (~₹129,000) or Wonder Studio (~₹12,300) for a 10‑minute video. Freemocap is open source and free.</li>
+      </ul>
+      <h3>Cost Comparison for 10 Minutes (600 seconds)</h3>
+      <table>
+        <tr>
+          <th>Method</th>
+          <th>Price (Approx.)</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Manual Animation</td>
+          <td>₹360,000 – ₹600,000</td>
+          <td>₹600–₹1,000 per second</td>
+        </tr>
+        <tr>
+          <td>Rokoko Motion Capture Bundle</td>
+          <td>₹360,000</td>
+          <td>One-time cost (≈$4,395)</td>
+        </tr>
+        <tr>
+          <td>AI Guided (Move.ai)</td>
+          <td>₹129,000</td>
+          <td>Team plan + extra credits</td>
+        </tr>
+        <tr>
+          <td>AI Guided (Wonder Studio)</td>
+          <td>₹12,300</td>
+          <td>Pro subscription pricing</td>
+        </tr>
+        <tr>
+          <td>Freemocap (Open Source)</td>
+          <td>₹0</td>
+          <td>No licensing cost</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- 7. Scene Preparation -->
+    <section id="scene-prep">
+      <h2>7. Scene Preparation</h2>
+      <p>The animation is integrated into the 3D environment with adjustments to the camera and lighting for improved composition and realism.</p>
+      <img src="https://img.freepik.com/free-photo/view-ancient-roman-empire-colosseum_23-2150912863.jpg" alt="Scene Preparation">
+    </section>
+
+    <!-- 8. FX Addition -->
+    <section id="fx">
+      <h2>8. FX Addition</h2>
+      <p>Special effects such as sparks, smoke, fire, etc. are added to create a dynamic and cinematic feel to the shot.</p>
+      <img src="https://www.rebelway.net/wp-content/uploads/Explosion-Reference-Videos-for-VFX.jpg.webp" alt="FX Addition">
+    </section>
+
+    <!-- 9. Final Lighting and Editing -->
+    <section id="final-lighting">
+      <h2>9. Final Lighting and Editing</h2>
+      <p>Lighting and editing are fine-tuned to ensure every element aligns with the desired mood before final output.</p>
+      <img src="https://i.ytimg.com/vi/0SJ-__0gK_k/maxresdefault.jpg" alt="Final Lighting and Editing">
+    </section>
+
+    <!-- 10. Rendering -->
+    <section id="rendering">
+      <h2>10. Rendering</h2>
+      <p>The fully assembled 3D scene is rendered into high-quality images or video, ready for review and further processing.</p>
+      <img src="https://framerusercontent.com/images/twhYx11z5oAEBnTu9Y8mBcs4B48.jpg" alt="Rendering">
+    </section>
+
+    <!-- 11. Final Compositing -->
+    <section id="compositing">
+      <h2>11. Final Compositing</h2>
+      <p>Different layers—background, animated elements, and FX—are combined and color graded to produce a cohesive final output.</p>
+      <img src="https://nofilmschool.com/media-library/blackmagic-design-fusion-7.jpg?id=34087068&width=1245&height=700&quality=90&coordinates=24%2C0%2C25%2C0" alt="Final Compositing">
+    </section>
+
+    <!-- 12. Final Edit -->
+    <section id="final-edit">
+      <h2>12. Final Edit</h2>
+      <p>The shots are assembled in sequence and sound effects, music, and additional touches are added to complete the previs.</p>
+      <img src="https://media.istockphoto.com/id/1356585971/photo/unrecognizable-guy-editing-astronaut-video.jpg?s=612x612&w=0&k=20&c=xeszOlvz5DAH2EObVOR1xSBHE2WlzVrh5SLitut99AY=" alt="Final Edit">
+    </section>
+
+    <!-- 13. Conclusion -->
+    <section id="conclusion">
+      <h2>13. Conclusion</h2>
+      <p>This workflow—from storyboarding to final edit—ensures a structured, efficient approach to creating a previs. Each stage builds on the previous one, streamlining planning and execution.</p>
+      <p></p>
+    </section>
+  </main>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" onclick="scrollToTop()">Top</button>
+
+  <script>
+    // Intersection Observer for fade-in effect on sections
+    const sections = document.querySelectorAll("section");
+    const options = { threshold: 0.15 };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, options);
+
+    sections.forEach(section => observer.observe(section));
+
+    // Back-to-Top button functionality
+    const backToTopButton = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      backToTopButton.style.display = window.pageYOffset > 300 ? "block" : "none";
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
